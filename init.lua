@@ -1,3 +1,4 @@
+require("keymapping")
 vim.opt.number = true
 vim.wo.cursorline = true
 vim.opt.list = true

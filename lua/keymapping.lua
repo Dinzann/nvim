@@ -1,7 +1,8 @@
-vim.keymap.set("i", "<C-h>", "<Left>")
-vim.keymap.set("i", "<C-l>", "<Right>")
-vim.keymap.set("i", "<C-j>", "<Down>")
-vim.keymap.set("i", "<C-k>", "<Up>")
+-- 插入模式下使用 hjkl 移动光标
+vim.keymap.set('i', '<C-h>', '<Left>', { noremap = true, desc = 'Move left' })
+vim.keymap.set('i', '<C-j>', '<Down>', { noremap = true, desc = 'Move down' })
+vim.keymap.set('i', '<C-k>', '<Up>', { noremap = true, desc = 'Move up' })
+vim.keymap.set('i', '<C-l>', '<Right>', { noremap = true, desc = 'Move right' })
 
 vim.keymap.set("i", "jk", "<Esc>")
 

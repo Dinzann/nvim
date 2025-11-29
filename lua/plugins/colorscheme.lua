@@ -16,6 +16,7 @@ return {
         { name = "󱩅 kanagawa-wave", colorscheme = "kanagawa-wave" },
         { name = " kanagawa-dragon", colorscheme = "kanagawa-dragon" },
         { name = " kanagawa-lotus", colorscheme = "kanagawa-lotus" },
+        { name = " Vscode", colorscheme = "vscode" },
                 -- 继续添加更多主题...
           },
         livePreview = true,
@@ -204,6 +205,14 @@ return {
     vim.cmd("colorscheme kanagawa-dragon")
     vim.cmd("colorscheme kanagawa-lotus")
 
+  end,
+},
+
+{
+  "Mofiqul/vscode.nvim",
+  priority = 1000, -- 确保主题优先加载
+  config = function()
+    vim.cmd("colorscheme vscode")
   end,
 },
 

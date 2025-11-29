@@ -12,6 +12,7 @@ return {
    {"rebelot/kanagawa.nvim",enabled = true,},
    {"ellisonleao/gruvbox.nvim",enabled = true,},
    {"vague-theme/vague.nvim",enabled = true,},
+   {"Mofiqul/vscode.nvim",enabled = true,},
 
    --自动补全 
    { "saghen/blink.cmp",enabled = true,},
