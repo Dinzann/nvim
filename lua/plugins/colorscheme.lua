@@ -211,6 +211,9 @@ return {
 {
   "Mofiqul/vscode.nvim",
   priority = 1000, -- 确保主题优先加载
+  opts = {
+      transparent_background = false,
+  },
   config = function()
     vim.cmd("colorscheme vscode")
   end,
