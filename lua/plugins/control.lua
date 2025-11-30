@@ -1,7 +1,7 @@
 return {
    --MarkDown预览
    {"MeanderingProgrammer/render-markdown.nvim",enabled = true, },
-
+    
    --MarkDown预览
    {"obsidian-nvim/obsidian.nvim",enabled = false, },
 
