@@ -1,4 +1,6 @@
 require("keymapping")
+require("config.lazy")
+
 vim.opt.number = true
 vim.wo.cursorline = true
 vim.opt.list = true
@@ -22,7 +24,4 @@ vim.g.neovide_normal_opacity = 1.0
 --主题
 
 vim.keymap.set("n","<leader>L","<CMD>Lazy<CR>", { desc = "[Lazy] 打开Lazy插件管理"})
-
-
-require("config.lazy")
 

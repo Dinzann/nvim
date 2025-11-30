@@ -4,11 +4,13 @@ return {
     main = "nvim-treesitter.configs",
     opts = {
       auto_install = true,
-      ensure_installed = { "c", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" },
+      ensure_installed = { "c", "vim", "vimdoc", "query", "elixir", "heex", "javascript", 
+			 "html", "markdown", "markdown_inline", "yaml", "latex", "typst" },
       sync_install = false,
-      highlight = { enable = true },
+      highlight = { enable = true,uadditional_vim_regex_highlighting = false },
       indent = { enable = true },
     },
     opts_extend = { "ensure_installed" },
   },
+
 }

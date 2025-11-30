@@ -24,7 +24,7 @@ return {
        })
 
       --Binds
-      vim.keymap.set("n", "<leader>ggt", ":Themery<CR>", { desc = "Open Themery theme selector", noremap = true, silent = true })
+      vim.keymap.set("n", "<leader>ggt", ":Themery<CR>", { desc = "打开 Themery 主题选择器", noremap = true, silent = true })
 
      end,
    },
@@ -34,7 +34,7 @@ return {
     name = "catppuccin",
     priority = 1000,
     opts = {
-      transparent_background = false,
+      transparent_background = true,
       custom_highlights = function(colors)
         -- stylua: ignore
         return {
@@ -77,7 +77,7 @@ return {
   config = function()
     -- NOTE: you do not need to call setup if you don't want to.
    require("vague").setup({
-  transparent = false, -- don't set background
+  transparent = true, -- don't set background
   -- disable bold/italic globally in `style`
   bold = true,
   italic = true,
@@ -170,7 +170,7 @@ return {
 
 {
 "ellisonleao/gruvbox.nvim",
-  priority = 1000, -- 确保主题在其他插件之前加载
+  priority = 1000, -- 确保主题在其他插件之前加载 
   config = function()
     -- 在这里设置主题的配置项
     require("gruvbox").setup({
@@ -211,9 +211,6 @@ return {
 {
   "Mofiqul/vscode.nvim",
   priority = 1000, -- 确保主题优先加载
-  opts = {
-      transparent_background = false,
-  },
   config = function()
     vim.cmd("colorscheme vscode")
   end,
