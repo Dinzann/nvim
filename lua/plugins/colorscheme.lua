@@ -193,19 +193,19 @@ return {
 "rebelot/kanagawa.nvim",
   priority = 1000, -- 确保主题优先加载，避免界面闪烁[citation:1]
   config = function()
-    require('kanagawa').setup({
+    require('kanagawa').setup({	
         -- 此处可添加 Kanagawa 的自定义配置
         -- 例如，设置默认变体为 "wave"
         -- variant = "wave",
         -- 其他配置选项...
     })
-
-    -- 立即应用主题[citation:1]
+ 
+  end,
+-- 立即应用主题[citation:1]
     vim.cmd("colorscheme kanagawa-wave")
     vim.cmd("colorscheme kanagawa-dragon")
     vim.cmd("colorscheme kanagawa-lotus")
 
-  end,
 },
 
 {
