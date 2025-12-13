@@ -199,13 +199,12 @@ return {
         -- variant = "wave",
         -- 其他配置选项...
     })
- 
-  end,
+
 -- 立即应用主题[citation:1]
     vim.cmd("colorscheme kanagawa-wave")
     vim.cmd("colorscheme kanagawa-dragon")
     vim.cmd("colorscheme kanagawa-lotus")
-
+  end,
 },
 
 {
