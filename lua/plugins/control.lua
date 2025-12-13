@@ -65,4 +65,7 @@ return {
    --Yazi文件管理 
    { "mikavilpas/yazi.nvim",enabled = true,},
 
+   --Git 插件
+   { "kdheepak/lazygit.nvim",enabled = true,},
+
 }
