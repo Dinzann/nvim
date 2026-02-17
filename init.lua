@@ -1,0 +1,6 @@
+require ('options')
+require ('keymapping')
+require ('plugins')
+require ('setup')
+require ('colorscheme')
+require ('lsp')
