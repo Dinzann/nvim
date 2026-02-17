@@ -246,3 +246,6 @@ require("Comment").setup({
     block = 'gb',
   },
 })
+
+-- oil.nvim
+require("oil").setup()

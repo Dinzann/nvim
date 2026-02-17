@@ -25,5 +25,6 @@ require("lazy").setup({
     { 'folke/noice.nvim', event = 'VeryLazy', dependencies = 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify' },
     { 'folke/which-key.nvim', event = 'VeryLazy' },
     { 'numToStr/Comment.nvim', lazy = false },
-    { 'kdheepak/lazygit.nvim', cmd = {"LazyGit", "LazyGitConfig", "LazyGitCurrentFile", "LazyGitFilter", "LazyGitFilterCurrentFile" }, dependencies = 'nvim-lua/plenary.nvim' }
+    { 'kdheepak/lazygit.nvim', cmd = {"LazyGit", "LazyGitConfig", "LazyGitCurrentFile", "LazyGitFilter", "LazyGitFilterCurrentFile" }, dependencies = 'nvim-lua/plenary.nvim' },
+    { 'stevearc/oil.nvim', dependencies = "nvim-tree/nvim-web-devicons", lazy = false }
   })
