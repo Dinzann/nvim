@@ -26,5 +26,6 @@ require("lazy").setup({
     { 'folke/which-key.nvim', event = 'VeryLazy' },
     { 'numToStr/Comment.nvim', lazy = false },
     { 'kdheepak/lazygit.nvim', cmd = {"LazyGit", "LazyGitConfig", "LazyGitCurrentFile", "LazyGitFilter", "LazyGitFilterCurrentFile" }, dependencies = 'nvim-lua/plenary.nvim' },
-    { 'stevearc/oil.nvim', dependencies = "nvim-tree/nvim-web-devicons", lazy = false }
+    { 'stevearc/oil.nvim', dependencies = "nvim-tree/nvim-web-devicons", lazy = false },
+    { 'L3MON4D3/LuaSnip', version = 'v2.*', dependencies = "rafamadriz/friendly-snippets" }
   })
