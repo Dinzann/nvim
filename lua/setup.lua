@@ -137,7 +137,7 @@ require("bufferline").setup({
 
 -- lspsaga.nvim
 require('lspsaga').setup({
-    -- 顶部面包屑美化
+    -- Top beautiful
     symbol_in_winbar = {
         enable = true,
         separator = ' › ',
@@ -146,14 +146,13 @@ require('lspsaga').setup({
         folder_level = 2,
         color_mode = true,
     },
-    -- 弹窗 UI 美化
+    -- UI beautiful
     ui = {
-        border = 'rounded', -- 圆角边框，匹配截图美感
+        border = 'rounded', -- Rounded ui
         devicon = true,
-        code_action = '💡', -- 这里的代码操作图标
+        code_action = '💡', -- Code visual icon
     },
-    -- 侧边栏与辅助功能
-    lightbulb = { enable = false }, -- 关闭烦人的灯泡
+    lightbulb = { enable = false }, -- Close bad lifht
     hover = {
         max_width = 0.6,
         open_link = 'gx',
@@ -223,6 +222,7 @@ require('lualine').setup {
 
 -- notice.nvim
 require("noice").setup({
+    cmdline = { view = "cmdline" },
     lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
         override = {
@@ -298,13 +298,13 @@ require('which-key').add {
     -- { '<leader>a', group = 'Avante', icon = '󰚩' },
     { '<leader>b', group = 'Buffer', icon = '' },
     -- { '<leader>d', group = 'DAP', icon = '' },
-    { '<leader>c', group = 'DiffView', icon = '' },
+    -- { '<leader>c', group = 'DiffView', icon = '' },
     { '<leader>g', group = 'Git', icon = '' },
     { '<leader>l', group = 'Lsp', mode = 'n', icon = '' },
     { '<leader>r', group = 'Overseer tasks', mode = 'n', icon = '󰑮' },
     { '<leader>f', group = 'Find', mode = 'n' },
     { '<leader>t', group = 'Toggle' },
-    { '<leader>h', group = 'Git Hunk', mode = { 'n', 'v' } },
-    { '<leader>P', group = 'Picture', icon = '' },
-    { '<leader>x', group = 'Execute Lua', icon = '', mode = { 'n', 'v' } },
+    -- { '<leader>h', group = 'Git Hunk', mode = { 'n', 'v' } },
+    -- { '<leader>P', group = 'Picture', icon = '' },
+    -- { '<leader>x', group = 'Execute Lua', icon = '', mode = { 'n', 'v' } },
 }

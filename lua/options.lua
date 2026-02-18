@@ -35,7 +35,7 @@ vim.keymap.set("n", "<leader>bw", "<cmd>Yazi cwd<cr>", { desc = "Buffer: Open ya
 vim.keymap.set("n", "<c-up>", "<cmd>Yazi toggle<cr>", { desc = "Buffer: Resume the last yazi session" })
 
 -- outline needed
-vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
+vim.keymap.set("n", "<leader>to", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
 
 -- bufferline needed
 vim.opt.termguicolors = true
@@ -46,3 +46,6 @@ vim.keymap.set("v", "<leader>/", "gc", { remap = true, desc = "Toggle comment vi
 
 -- lazygit needed
 vim.keymap.set("n", "<leader>gl", "<cmd>LazyGit<CR>", { desc = "Git: Open Lazygit" })
+
+-- oil needed
+vim.keymap.set("n", "<leader>bo", "<cmd>Oil<CR>", { desc = "Oil: Open Oil" })
