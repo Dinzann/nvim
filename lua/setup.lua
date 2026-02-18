@@ -77,7 +77,7 @@ require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = {
         "lua_ls", -- Lua
-        "pylsp" --python
+        "pylsp"   --python
     },
 })
 
@@ -233,11 +233,11 @@ require("noice").setup({
     },
     -- you can enable a preset for easier configuration
     presets = {
-        bottom_search = true,     -- use a classic bottom cmdline for search
-        command_palette = true,   -- position the cmdline and popupmenu together
+        bottom_search = true,         -- use a classic bottom cmdline for search
+        command_palette = true,       -- position the cmdline and popupmenu together
         long_message_to_split = true, -- long messages will be sent to a split
-        inc_rename = false,       -- enables an input dialog for inc-rename.nvim
-        lsp_doc_border = false,   -- add a border to hover docs and signature help
+        inc_rename = false,           -- enables an input dialog for inc-rename.nvim
+        lsp_doc_border = false,       -- add a border to hover docs and signature help
     },
 })
 
@@ -260,4 +260,51 @@ require("Comment").setup({
 -- oil.nvim
 require("oil").setup()
 
--- LuaSnip
+--which-key.nvim
+require('which-key').setup {
+    ---@param ctx { mode: string, operator: string }
+    defer = function(ctx)
+        if vim.list_contains({ 'd', 'y' }, ctx.operator) then
+            return true
+        end
+        return vim.list_contains({ 'v', '<C-V>', 'V' }, ctx.mode)
+    end,
+    preset = 'modern',
+    show_help = false,
+    icons = {
+        colors = true,
+        keys = {
+            -- Up = '􀄨',
+            -- Down = '􀄩',
+            -- Left = '􀄪',
+            -- Right = '􀄫',
+            -- C = '􀆍',
+            -- M = '􀆕',
+            -- S = '􀆝',
+            -- CR = '􀅇',
+            -- Esc = '􀆧',
+            ScrollWheelDown = '󱕐',
+            ScrollWheelUp = '󱕑',
+            -- NL = '􀅇',
+            -- BS = '􁂉',
+            -- Space = '󱁐',
+            -- Tab = '􀅂',
+        },
+    },
+}
+
+require('which-key').add {
+    { 'g', group = 'Go to', icon = '󰿅' },
+    -- { '<leader>a', group = 'Avante', icon = '󰚩' },
+    { '<leader>b', group = 'Buffer', icon = '' },
+    -- { '<leader>d', group = 'DAP', icon = '' },
+    { '<leader>c', group = 'DiffView', icon = '' },
+    { '<leader>g', group = 'Git', icon = '' },
+    { '<leader>l', group = 'Lsp', mode = 'n', icon = '' },
+    { '<leader>r', group = 'Overseer tasks', mode = 'n', icon = '󰑮' },
+    { '<leader>f', group = 'Find', mode = 'n' },
+    { '<leader>t', group = 'Toggle' },
+    { '<leader>h', group = 'Git Hunk', mode = { 'n', 'v' } },
+    { '<leader>P', group = 'Picture', icon = '' },
+    { '<leader>x', group = 'Execute Lua', icon = '', mode = { 'n', 'v' } },
+}

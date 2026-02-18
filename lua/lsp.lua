@@ -17,9 +17,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
         keymap.set("n", "gd", lsp.buf.definition, { buffer = event.buf, desc = 'LSP: Goto Definition' })
         keymap.set("n", "gD", lsp.buf.declaration, { buffer = event.buf, desc = 'LSP: Goto Declaration' })
-        keymap.set("n", "<leader>rn", lsp.buf.rename, { buffer = event.buf, desc = 'LSP: Remane Argument' })
+        keymap.set("n", "<leader>lr", lsp.buf.rename, { buffer = event.buf, desc = 'LSP: Remane Argument' })
         keymap.set("n", "K", lsp.buf.hover, bufopts)
-        keymap.set("n", "<leader>f", function()
+        keymap.set("n", "<leader>lf", function()
             vim.lsp.buf.format({ async = true })
         end, { buffer = event.buf, desc = 'LSP: Code formatting' })
 

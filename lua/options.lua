@@ -30,9 +30,9 @@ vim.opt.smartcase = true  -- but make it case sensitive if an uppercase is enter
 
 -- Yazi needed
 vim.g.loaded_netrwPlugin = 1
-vim.keymap.set({ "n", "v" }, "<leader>-", "<cmd>Yazi<cr>", { desc = "Open yazi at the current file" })
-vim.keymap.set("n", "<leader>cw", "<cmd>Yazi cwd<cr>", { desc = "Open yazi in nvim's working directory" })
-vim.keymap.set("n", "<c-up>", "<cmd>Yazi toggle<cr>", { desc = "Resume the last yazi session" })
+vim.keymap.set({ "n", "v" }, "<leader>bb", "<cmd>Yazi<cr>", { desc = "Buffer: Open yazi at the current file" })
+vim.keymap.set("n", "<leader>bw", "<cmd>Yazi cwd<cr>", { desc = "Buffer: Open yazi in nvim's working directory" })
+vim.keymap.set("n", "<c-up>", "<cmd>Yazi toggle<cr>", { desc = "Buffer: Resume the last yazi session" })
 
 -- outline needed
 vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
@@ -45,4 +45,4 @@ vim.keymap.set("n", "<leader>/", "gcc", { remap = true, desc = "Toggle comment l
 vim.keymap.set("v", "<leader>/", "gc", { remap = true, desc = "Toggle comment visual" })
 
 -- lazygit needed
-vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "Lazygit: Open Lazygit" })
+vim.keymap.set("n", "<leader>gl", "<cmd>LazyGit<CR>", { desc = "Git: Open Lazygit" })
