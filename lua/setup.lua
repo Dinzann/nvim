@@ -77,7 +77,8 @@ require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = {
         "lua_ls", -- Lua
-        "pylsp"   --python
+        "pylsp",  --python
+        "taplo"   --toml
     },
 })
 
