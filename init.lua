@@ -1,5 +1,5 @@
-require ('options')
 require ('keymapping')
+require ('options')
 require ('plugins')
 require ('setup')
 require ('colorscheme')

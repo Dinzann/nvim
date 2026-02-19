@@ -27,5 +27,7 @@ require("lazy").setup({
     { 'numToStr/Comment.nvim', lazy = false },
     { 'kdheepak/lazygit.nvim', cmd = {"LazyGit", "LazyGitConfig", "LazyGitCurrentFile", "LazyGitFilter", "LazyGitFilterCurrentFile" }, dependencies = 'nvim-lua/plenary.nvim' },
     { 'stevearc/oil.nvim', dependencies = "nvim-tree/nvim-web-devicons", lazy = false },
-    { 'L3MON4D3/LuaSnip', version = 'v2.*', dependencies = "rafamadriz/friendly-snippets" }
-  })
+    { 'L3MON4D3/LuaSnip', version = 'v2.*', dependencies = "rafamadriz/friendly-snippets" },
+    { 'goolord/alpha-nvim', dependencies = 'nvim-tree/nvim-web-devicons' },
+    { 'nvim-telescope/telescope.nvim', version = '*', dependencies = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' } } },
+})
