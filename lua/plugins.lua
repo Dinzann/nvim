@@ -22,7 +22,6 @@ require("lazy").setup({
     { 'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons', 'moll/vim-bbye' },
     { 'nvimdev/lspsaga.nvim', dependencies = 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
     { 'nvim-lualine/lualine.nvim', dependencies = 'nvim-tree/nvim-web-devicons' },
-    { 'folke/noice.nvim', event = 'VeryLazy', dependencies = 'MunifTanjim/nui.nvim', 'rcarriga/nvim-notify' },
     { 'folke/which-key.nvim', event = 'VeryLazy' },
     { 'numToStr/Comment.nvim', lazy = false },
     { 'kdheepak/lazygit.nvim', cmd = {"LazyGit", "LazyGitConfig", "LazyGitCurrentFile", "LazyGitFilter", "LazyGitFilterCurrentFile" }, dependencies = 'nvim-lua/plenary.nvim' },
@@ -30,4 +29,7 @@ require("lazy").setup({
     { 'L3MON4D3/LuaSnip', version = 'v2.*', dependencies = "rafamadriz/friendly-snippets" },
     { 'goolord/alpha-nvim', dependencies = 'nvim-tree/nvim-web-devicons' },
     { 'nvim-telescope/telescope.nvim', version = '*', dependencies = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' } } },
+    { 'rebelot/heirline.nvim' },
+    { 'NvChad/nvim-colorizer.lua' },
+    { 'rcarriga/nvim-notify', lazy = false }
 })
