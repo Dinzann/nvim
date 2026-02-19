@@ -21,7 +21,6 @@ require("lazy").setup({
     { 'hedyhli/outline.nvim' },
     { 'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons', 'moll/vim-bbye' },
     { 'nvimdev/lspsaga.nvim', dependencies = 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
-    { 'nvim-lualine/lualine.nvim', dependencies = 'nvim-tree/nvim-web-devicons' },
     { 'folke/which-key.nvim', event = 'VeryLazy' },
     { 'numToStr/Comment.nvim', lazy = false },
     { 'kdheepak/lazygit.nvim', cmd = {"LazyGit", "LazyGitConfig", "LazyGitCurrentFile", "LazyGitFilter", "LazyGitFilterCurrentFile" }, dependencies = 'nvim-lua/plenary.nvim' },
