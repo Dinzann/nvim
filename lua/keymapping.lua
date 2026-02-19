@@ -39,12 +39,3 @@ vim.keymap.set('i', '<C-h>', '<Left>', opts)
 vim.keymap.set('i', '<C-j>', '<Down>', opts)
 vim.keymap.set('i', '<C-k>', '<Up>', opts)
 vim.keymap.set('i', '<C-l>', '<Right>', opts)
-
-----------------
--- Buffer ste --
-----------------
-vim.keymap.set('n', 'tt', '<cmd>BufferLinePick<CR>')
-vim.keymap.set('n', 'th', '<cmd>BufferLineCyclePrev<CR>')
-vim.keymap.set('n', 'tl', '<cmd>BufferLineCycleNext<CR>')
-vim.keymap.set('n', 'tq', '<cmd>BufferLinePickClose<CR>')
-vim.keymap.set('n', 'td', '<cmd>Bdelete<CR>')

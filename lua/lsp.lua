@@ -13,12 +13,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
         local client = vim.lsp.get_client_by_id(event.data.client_id)
         local keymap = vim.keymap
         local lsp = vim.lsp
-        local bufopts = { noremap = true, silent = true }
+        -- local bufopts = { noremap = true, silent = true }
 
         keymap.set("n", "gd", lsp.buf.definition, { buffer = event.buf, desc = 'LSP: Goto Definition' })
         keymap.set("n", "gD", lsp.buf.declaration, { buffer = event.buf, desc = 'LSP: Goto Declaration' })
         keymap.set("n", "<leader>lr", lsp.buf.rename, { buffer = event.buf, desc = 'LSP: Remane Argument' })
-        keymap.set("n", "K", lsp.buf.hover, bufopts)
+        keymap.set("n", "K", lsp.buf.hover, { buffer = event.buf, desc = "LSP:Check Argumen" })
         keymap.set("n", "<leader>lf", function()
             vim.lsp.buf.format({ async = true })
         end, { buffer = event.buf, desc = 'LSP: Code formatting' })

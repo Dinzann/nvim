@@ -28,7 +28,14 @@ vim.opt.hlsearch = false  -- do not highlight matches
 vim.opt.ignorecase = true -- ignore case in searches by default
 vim.opt.smartcase = true  -- but make it case sensitive if an uppercase is entered
 
--- Yazi needed
+-- bufferline needed
+vim.keymap.set('n', 'tt', '<cmd>BufferLinePick<CR>', { desc = "BufferLine: Pick" })
+vim.keymap.set('n', 'th', '<cmd>BufferLineCyclePrev<CR>', { desc = "BufferLine: Left Tab" })
+vim.keymap.set('n', 'tl', '<cmd>BufferLineCycleNext<CR>', { desc = "BufferLine: Right Tab" })
+vim.keymap.set('n', 'tq', '<cmd>BufferLinePickClose<CR>', { desc = "BufferLine: Close Tab" })
+vim.keymap.set('n', 'td', '<cmd>Bdelete<CR>', { desc = "BufferLine: Delete Tab" })
+
+-- yazi needed
 vim.g.loaded_netrwPlugin = 1
 vim.keymap.set({ "n", "v" }, "<leader>bb", "<cmd>Yazi<cr>", { desc = "Buffer: Open yazi at the current file" })
 vim.keymap.set("n", "<leader>bw", "<cmd>Yazi cwd<cr>", { desc = "Buffer: Open yazi in nvim's working directory" })
