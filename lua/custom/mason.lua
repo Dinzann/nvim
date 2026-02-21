@@ -5,7 +5,9 @@ require("mason-lspconfig").setup({
         "lua_ls", -- Lua
         "pylsp",  --python
         "taplo",   --toml
-        "clangd"  --cpp
+        "clangd", --cpp
+        "ts_ls", --javascript & typescript
+        "cssls"  --css
     },
 })
 
