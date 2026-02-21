@@ -18,8 +18,7 @@ local colors = {
     diag_error = "#db4b4b",
     diag_warn = "#e0af68",
     diag_info = "#0db9d7",
-    diag_hint = "#1abc9c",
-}
+    diag_hint = "#1abc9c", }
 
 -- 2. 封装函数：创建圆角胶囊样式
 -- @param component 核心组件内容
@@ -147,14 +146,16 @@ local StatusLine = {
     ViMode,              -- 模式胶囊
     { provider = "  " },
     FileName,            -- 文件路径
+    { provider = "  " },
+    Diagnostics,         -- 诊断胶囊
+    { provider = "  " }, -- 最右侧留白
     Spacer,              -- 撑开中间
     LSPActive,           -- LSP 状态
     { provider = " " },
     Ruler,               -- 行号胶囊
     { provider = " " },
-    Diagnostics,         -- 诊断胶囊
-    { provider = "  " }, -- 最右侧留白
 }
+
 
 -- 5. 初始化配置
 require("heirline").setup({
