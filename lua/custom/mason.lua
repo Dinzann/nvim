@@ -8,6 +8,7 @@ require("mason-lspconfig").setup({
         "clangd", --cpp
         "ts_ls",  --javascript & typescript
         "cssls",  --css
-        "jsonls"  --json
+        "jsonls",  --json
+        "yamlls"  --yaml
     },
 })
