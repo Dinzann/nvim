@@ -30,5 +30,6 @@ require("lazy").setup({
     { 'nvim-telescope/telescope.nvim', version = '*', dependencies = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' } } },
     { 'rebelot/heirline.nvim' },
     { 'NvChad/nvim-colorizer.lua' },
-    { 'rcarriga/nvim-notify', lazy = false }
+    { 'rcarriga/nvim-notify', lazy = false },
+    { 'HiPhish/rainbow-delimiters.nvim' }
 })
