@@ -1,7 +1,6 @@
 -- define common options
 local opts = {
-    noremap = true, -- non-recursive
-    silent = true,  -- do not show message
+    noremap = true, -- non-recursive silent = true,  -- do not show message
 }
 
 -----------------
@@ -39,3 +38,10 @@ vim.keymap.set('i', '<C-h>', '<Left>', opts)
 vim.keymap.set('i', '<C-j>', '<Down>', opts)
 vim.keymap.set('i', '<C-k>', '<Up>', opts)
 vim.keymap.set('i', '<C-l>', '<Right>', opts)
+
+----------------
+-- Delete way --
+----------------
+vim.keymap.set({'n', 'v'}, 'd', '"_d')
+vim.keymap.set({'n', 'v'}, 'dd', '"_dd')
+vim.keymap.set({'n', 'v'}, 'c', '"_c')
