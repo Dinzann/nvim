@@ -10,6 +10,7 @@ require("mason-lspconfig").setup({
         "cssls",  --css
         "jsonls",  --json
         "yamlls",  --yaml
-        "html" --html
+        "html", --html
+        "bashls",  --bash
     },
 })
