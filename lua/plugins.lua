@@ -31,5 +31,5 @@ require("lazy").setup({
     { 'rebelot/heirline.nvim' },
     { 'NvChad/nvim-colorizer.lua' },
     { 'rcarriga/nvim-notify', lazy = false },
-    { 'HiPhish/rainbow-delimiters.nvim' }
+    { 'HiPhish/rainbow-delimiters.nvim' },
 })
