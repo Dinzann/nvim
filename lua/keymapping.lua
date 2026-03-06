@@ -35,13 +35,12 @@ vim.keymap.set('v', '>', '>gv', opts)
 vim.keymap.set("i", "jk", "<Esc>", opts)
 
 vim.keymap.set('i', '<C-h>', '<Left>', opts)
-vim.keymap.set('i', '<C-j>', '<Down>', opts)
 vim.keymap.set('i', '<C-k>', '<Up>', opts)
-vim.keymap.set('i', '<C-l>', '<Right>', opts)
+vim.keymap.set('i', '<C-j>', '<Down>', opts)
 
 ----------------
 -- Delete way --
 ----------------
-vim.keymap.set({'n', 'v'}, 'd', '"_d')
-vim.keymap.set({'n', 'v'}, 'dd', '"_dd')
-vim.keymap.set({'n', 'v'}, 'c', '"_c')
+-- vim.keymap.set({'n', 'v'}, 'd', '"_d')
+-- vim.keymap.set({'n', 'v'}, 'dd', '"_dd')
+-- vim.keymap.set({'n', 'v'}, 'c', '"_c')
