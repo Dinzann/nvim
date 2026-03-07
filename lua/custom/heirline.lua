@@ -1,5 +1,4 @@
 local conditions = require("heirline.conditions")
-local utils = require("heirline.utils")
 
 -- 1. 颜色面板：提取自你提供的截图色调
 local colors = {
@@ -156,8 +155,6 @@ local StatusLine = {
     { provider = " " },
 }
 
-
--- 5. 初始化配置
 require("heirline").setup({
     statusline = StatusLine,
     opts = {
