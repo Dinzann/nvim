@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     { 'mikavilpas/yazi.nvim' },
     { 'catppuccin/nvim' },
-    { 'saghen/blink.cmp',                dependencies = { 'rafamadriz/friendly-snippets', 'saghen/blink.compat', 'epwalsh/obsidian.nvim' },                                                       version = '1.*' },
+    { 'saghen/blink.cmp',                dependencies = { 'rafamadriz/friendly-snippets', 'saghen/blink.compat', 'epwalsh/obsidian.nvim' },       version = '1.*' },
     { 'mason-org/mason.nvim',            dependencies = { 'williamboman/mason-lspconfig.nvim' } },
     { 'windwp/nvim-autopairs',           event = "InsertEnter",                                                                                   config = true },
     { 'nvim-treesitter/nvim-treesitter', lazy = false,                                                                                            build = ':TSUpdate' },
@@ -34,4 +34,6 @@ require("lazy").setup({
     { 'HiPhish/rainbow-delimiters.nvim' },
     { "epwalsh/obsidian.nvim",           version = "*",                                                                                           lazy = true,                                                                                               ft = "markdown", dependencies = { "nvim-lua/plenary.nvim" } },
     { 'saghen/blink.compat',             version = '2.*',                                                                                         lazy = true },
+    { "sudo-tee/opencode.nvim", dependencies = { "nvim-lua/plenary.nvim", { "MeanderingProgrammer/render-markdown.nvim", opts = { anti_conceal = { enabled = false }, file_types = { 'markdown', 'opencode_output' }, }, ft = { 'markdown', 'Avante', 'copilot-chat', 'opencode_output' }, }, 'saghen/blink.cmp' },
+    }
 })
