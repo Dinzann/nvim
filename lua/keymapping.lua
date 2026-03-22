@@ -33,7 +33,7 @@ vim.keymap.set('v', '>', '>gv', opts)
 -- Inset mode --
 ----------------
 vim.keymap.set("i", "jk", "<Esc>", opts)
-
+vim.keymap.set('i', '<C-l>', '<Right>', opts)
 vim.keymap.set('i', '<C-h>', '<Left>', opts)
 vim.keymap.set('i', '<C-k>', '<Up>', opts)
 vim.keymap.set('i', '<C-j>', '<Down>', opts)

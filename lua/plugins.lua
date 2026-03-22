@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     { 'mikavilpas/yazi.nvim' },
     { 'catppuccin/nvim' },
-    { 'saghen/blink.cmp',                dependencies = { 'rafamadriz/friendly-snippets' },                                                       version = '1.*' },
+    { 'saghen/blink.cmp',                dependencies = { 'rafamadriz/friendly-snippets', 'saghen/blink.compat', 'epwalsh/obsidian.nvim' },                                                       version = '1.*' },
     { 'mason-org/mason.nvim',            dependencies = { 'williamboman/mason-lspconfig.nvim' } },
     { 'windwp/nvim-autopairs',           event = "InsertEnter",                                                                                   config = true },
     { 'nvim-treesitter/nvim-treesitter', lazy = false,                                                                                            build = ':TSUpdate' },
@@ -32,4 +32,6 @@ require("lazy").setup({
     { 'NvChad/nvim-colorizer.lua' },
     { 'rcarriga/nvim-notify',            lazy = false },
     { 'HiPhish/rainbow-delimiters.nvim' },
+    { "epwalsh/obsidian.nvim",           version = "*",                                                                                           lazy = true,                                                                                               ft = "markdown", dependencies = { "nvim-lua/plenary.nvim" } },
+    { 'saghen/blink.compat',             version = '2.*',                                                                                         lazy = true },
 })

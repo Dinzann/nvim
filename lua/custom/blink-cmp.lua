@@ -48,8 +48,34 @@ require('blink.cmp').setup({
     },
 
     sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer' },
+        default = { 'lsp', 'path', 'snippets', 'buffer', 'obsidian', 'obsidian_new', 'obsidian_tags' },
+        providers = {
+            obsidian = {
+                name = "obsidian",
+                module = "blink.compat.source",
+                score_offset = 100, -- 提升优先级
+                -- 尝试直接写在这里
+                opts = {
+                    -- 同时也保留一份在 opts 里，确保双重保险
+                    trigger_characters = { "[" },
+                },
+            },
+            obsidian_new = {
+                name = "obsidian_new",
+                module = "blink.compat.source",
+                score_offset = 90,
+                opts = { trigger_characters = { "[" } },
+            },
+            obsidian_tags = {
+                name = "obsidian_tags",
+                module = "blink.compat.source",
+                score_offset = 80,
+                opts = { trigger_characters = { "#" } },
+            },
+        },
     },
+
+    signature = { enabled = true },
 
     fuzzy = { implementation = "prefer_rust_with_warning" }
 })
