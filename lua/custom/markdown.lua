@@ -1,5 +1,5 @@
 require('render-markdown').setup {
-   callout = {
+    callout = {
         abstract = { raw = '[!ABSTRACT]', rendered = '󰯂 Abstract', highlight = 'RenderMarkdownInfo', category = 'obsidian' },
         summary = { raw = '[!SUMMARY]', rendered = '󰯂 Summary', highlight = 'RenderMarkdownInfo', category = 'obsidian' },
         tldr = { raw = '[!TLDR]', rendered = '󰦩 Tldr', highlight = 'RenderMarkdownInfo', category = 'obsidian' },
@@ -58,6 +58,7 @@ require('render-markdown').setup {
         },
     },
     pipe_table = {
+        enabled = true,
         alignment_indicator = '─',
         border = { '╭', '┬', '╮', '├', '┼', '┤', '╰', '┴', '╯', '│', '─' },
     },
