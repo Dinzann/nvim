@@ -1,8 +1,12 @@
-local Snacks = Snacks
+local Snacks = require("snacks")
 
-require("snacks").setup({
+Snacks.setup({
     image = {
         enabled = true,
+        doc = {
+            inline = true,
+            render_math = true,
+        },
         math = {
             enabled = true,
             inline = false,
@@ -37,10 +41,9 @@ require("snacks").setup({
         },
         opacity = 0.1,
         filter = function()
-            return vim.g.snacks_dim ~= false -- 提供一个全局开关
+            return vim.g.snacks_dim ~= false
         end,
 
-        -- 切换代码聚焦（昏暗掉非工作区）
         vim.keymap.set("n", "<leader>sd", function()
             if Snacks.dim.enabled then
                 Snacks.dim.disable()

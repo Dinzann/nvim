@@ -5,7 +5,8 @@ require('nvim-treesitter').setup {
     folds = { enable = true },
 }
 
-require('nvim-treesitter').install { 'rust',
+require('nvim-treesitter').install {
+    'rust',
     'javascript',
     'zig',
     'lua',
@@ -16,5 +17,6 @@ require('nvim-treesitter').install { 'rust',
     'typst',
     'css',
     'html',
-    'regex'
+    'regex',
+    'nix'
 }
