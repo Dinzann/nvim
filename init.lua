@@ -1,2 +1,3 @@
-require("plugins")
-require("lsp.lsp")
+require('plugins')
+require('lsp.lsp')
+require('custom.folding')

@@ -33,4 +33,4 @@ vim.keymap.set('n', 'tt', '<cmd>BufferLinePick<CR>', { desc = "BufferLine: Pick"
 vim.keymap.set('n', 'th', '<cmd>BufferLineCyclePrev<CR>', { desc = "BufferLine: Left Tab" })
 vim.keymap.set('n', 'tl', '<cmd>BufferLineCycleNext<CR>', { desc = "BufferLine: Right Tab" })
 vim.keymap.set('n', 'tq', '<cmd>BufferLinePickClose<CR>', { desc = "BufferLine: Close Tab" })
-vim.keymap.set("n", "td", "<cmd>bdelete<CR>", { desc = "BufferLine: Delete Tab" })
+-- vim.keymap.set("n", "td", "<cmd>bdelete<CR>", { desc = "BufferLine: Delete Tab" })

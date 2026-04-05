@@ -7,7 +7,20 @@ vim.pack.add({
 require("lsp.keymapping")
 
 vim.diagnostic.config {
-    virtual_text = true,
+    virtual_text = {
+        spacing = 4,
+        prefix = ''
+    },
+    float = { severity_sort = true },
+    severity_sort = true,
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = '',
+            [vim.diagnostic.severity.HINT] = '',
+            [vim.diagnostic.severity.INFO] = '',
+            [vim.diagnostic.severity.WARN] = ''
+        }
+    }
 }
 
 require("lazydev").setup({

@@ -166,7 +166,7 @@ end, "Open lazygit")
 map("<leader>n", Snacks.notifier.show_history, "Notification history")
 map("<leader>gb", Snacks.git.blame_line, "Git blame line")
 
-map("<leader>K", Snacks.image.hover, "Display image in hover")
+-- map("<leader>K", Snacks.image.hover, "Display image in hover")
 
 local Snacks = require("snacks")
 

@@ -9,7 +9,6 @@ require("custom.config.comment")
 require("custom.config.colorscheme")
 require("custom.config.color")
 
--- require("custom.config.lsp")
 require("custom.config.lspsaga")
 require("custom.config.blink")
 require("custom.config.aerial")
