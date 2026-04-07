@@ -19,6 +19,7 @@ require("blink.cmp").setup({
         accept = { auto_brackets = { enabled = true } },
         list = { selection = { preselect = false, auto_insert = true } },
         menu = {
+            border = 'single',
             auto_show = true,
             draw = {
                 treesitter = { "lsp" },
