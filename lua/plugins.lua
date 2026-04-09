@@ -1,7 +1,3 @@
-require("custom.autocmds")
-require("custom.options")
-require("custom.keymapping")
-
 require("custom.config.vim-tmux-navigator")
 require("custom.config.autopairs")
 require("custom.config.comment")
