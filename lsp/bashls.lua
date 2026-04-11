@@ -12,6 +12,7 @@
 ---@type vim.lsp.Config
 return {
   cmd = { 'bash-language-server', 'start' },
+---@diagnostic disable-next-line: undefined-doc-name
   ---@type lspconfig.settings.bashls
   settings = {
     bashIde = {
