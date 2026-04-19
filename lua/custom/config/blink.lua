@@ -37,7 +37,12 @@ require("blink.cmp").setup({
                 name = "Codeium",
                 module = "codeium.blink",
                 async = true,
-                score_offset = 100
+                score_offset = 100,
+                enabled = function()
+                    -- 如果当前 buffer 是临时类型（比如输入框），则禁用补全
+                    local buftype = vim.api.nvim_get_option_value("buftype", { buf = 0 })
+                    return buftype ~= "prompt" and buftype ~= "nofile"
+                end,
             },
         },
     },
