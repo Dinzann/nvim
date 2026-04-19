@@ -1,6 +1,7 @@
 require("custom.config.vim-tmux-navigator")
 require("custom.config.autopairs")
 require("custom.config.comment")
+require("custom.config.flash")
 
 require("custom.config.colorscheme")
 require("custom.config.color")
