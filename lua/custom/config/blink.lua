@@ -2,6 +2,7 @@ vim.pack.add({
     { src = "https://github.com/saghen/blink.cmp" },
     { src = "https://github.com/L3MON4D3/LuaSnip" },
     { src = "https://github.com/rafamadriz/friendly-snippets" },
+    { src = "https://github.com/fang2hou/blink-copilot" }
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
@@ -28,7 +29,15 @@ require("blink.cmp").setup({
         trigger = { show_on_backspace = true },
     },
     sources = {
-        default = { "lsp", "path", "snippets", "buffer" },
+        default = { "copilot", "lsp", "path", "snippets", "buffer" },
+        providers = {
+            copilot = {
+                name = "copilot",
+                module = "blink-copilot",
+                score_offset = 100,
+                async = true,
+            },
+        },
     },
     snippets = { preset = "luasnip" },
     signature = { enabled = true },

@@ -8,6 +8,7 @@ require("custom.config.color")
 
 require("custom.config.lspsaga")
 require("custom.config.blink")
+require("custom.config.copilot")
 require("custom.config.aerial")
 require("custom.config.treesitter")
 

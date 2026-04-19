@@ -1,4 +1,3 @@
--- lua/utils/logo.lua
 local M = {}
 
 M.default = {
