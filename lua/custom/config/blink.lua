@@ -2,7 +2,6 @@ vim.pack.add({
     { src = "https://github.com/saghen/blink.cmp" },
     { src = "https://github.com/L3MON4D3/LuaSnip" },
     { src = "https://github.com/rafamadriz/friendly-snippets" },
-    { src = "https://github.com/fang2hou/blink-copilot" }
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
@@ -26,16 +25,19 @@ require("blink.cmp").setup({
                 treesitter = { "lsp" },
             },
         },
-        trigger = { show_on_backspace = true },
+        trigger = {
+            show_on_backspace = true,
+            prefetch_on_insert = false
+        },
     },
     sources = {
-        default = { "copilot", "lsp", "path", "snippets", "buffer" },
+        default = { "codeium", "lsp", "path", "snippets", "buffer" },
         providers = {
-            copilot = {
-                name = "copilot",
-                module = "blink-copilot",
-                score_offset = 100,
+            codeium = {
+                name = "Codeium",
+                module = "codeium.blink",
                 async = true,
+                score_offset = 100
             },
         },
     },
