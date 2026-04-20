@@ -29,6 +29,19 @@ require("blink.cmp").setup({
             show_on_backspace = true,
             prefetch_on_insert = false
         },
+        documentation = {
+            auto_show = true,
+            auto_show_delay_ms = 0,
+            update_on_insert_detach = true,
+
+            window = {
+                border = "rounded",
+                winhighlight =
+                "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
+                max_width = 80,
+                max_height = 20,
+            },
+        },
     },
     sources = {
         default = { "codeium", "lsp", "path", "snippets", "buffer" },
@@ -39,7 +52,6 @@ require("blink.cmp").setup({
                 async = true,
                 score_offset = 100,
                 enabled = function()
-                    -- 如果当前 buffer 是临时类型（比如输入框），则禁用补全
                     local buftype = vim.api.nvim_get_option_value("buftype", { buf = 0 })
                     return buftype ~= "prompt" and buftype ~= "nofile"
                 end,
