@@ -15,6 +15,13 @@ require("blink.cmp").setup({
         ["<Tab>"] = { "snippet_forward", "fallback" },
         ["<S-Tab>"] = { "snippet_backward", "fallback" },
     },
+    cmdline = {
+        completion = {
+            menu = {
+                auto_show = true,
+            },
+        },
+    },
     completion = {
         accept = { auto_brackets = { enabled = true } },
         list = { selection = { preselect = false, auto_insert = true } },
