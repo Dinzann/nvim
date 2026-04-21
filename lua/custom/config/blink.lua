@@ -32,8 +32,6 @@ require("blink.cmp").setup({
         documentation = {
             auto_show = true,
             auto_show_delay_ms = 0,
-            update_on_insert_detach = true,
-
             window = {
                 border = "rounded",
                 winhighlight =
