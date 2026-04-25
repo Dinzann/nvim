@@ -12,10 +12,6 @@
       "rev": "645d108a5242ec7b378cbe643eb6d04d4223f034",
       "src": "https://github.com/stevearc/aerial.nvim"
     },
-    "blink-copilot": {
-      "rev": "7ad8209b2f880a2840c94cdcd80ab4dc511d4f39",
-      "src": "https://github.com/fang2hou/blink-copilot"
-    },
     "blink.cmp": {
       "rev": "679a2ffad4bae720bb12e6bcdf57b0dd8b8a80f8",
       "src": "https://github.com/saghen/blink.cmp"
@@ -27,14 +23,6 @@
     "catppuccin": {
       "rev": "a7788416689dbefea659d9e9415c87926b0ba5d8",
       "src": "https://github.com/catppuccin/nvim"
-    },
-    "codeium.nvim": {
-      "rev": "821b570b526dbb05b57aa4ded578b709a704a38a",
-      "src": "https://github.com/Exafunction/codeium.nvim"
-    },
-    "copilot.lua": {
-      "rev": "ad7e729e9a6348f7da482be0271d452dbc4c8e2c",
-      "src": "https://github.com/zbirenbaum/copilot.lua"
     },
     "flash.nvim": {
       "rev": "fcea7ff883235d9024dc41e638f164a450c14ca2",
@@ -67,10 +55,6 @@
     "mini.icons": {
       "rev": "7fdae2443a0e2910015ca39ad74b50524ee682d3",
       "src": "https://github.com/nvim-mini/mini.icons"
-    },
-    "minuet-ai.nvim": {
-      "rev": "ee03326381c93f6417fa66aeb2ca85a26c0706e7",
-      "src": "https://github.com/milanglacier/minuet-ai.nvim"
     },
     "nvim-autopairs": {
       "rev": "59bce2eef357189c3305e25bc6dd2d138c1683f5",
