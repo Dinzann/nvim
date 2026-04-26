@@ -38,7 +38,7 @@ require("snacks").setup({
                 { icon = " ", key = "M", desc = "Mason", action = ":Mason", enabled = package.loaded.lazy ~= nil },
                 { icon = " ", key = "q", desc = "Quit", action = ":qa" },
             },
-            header = table.concat(logo.din, "\n"),
+            header = table.concat(logo.cat, "\n"),
         },
         sections = {
             { section = "header" },

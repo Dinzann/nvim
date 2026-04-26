@@ -46,8 +46,8 @@ require('which-key').add {
     { '<leader>f', group = 'Find', mode = 'n' },
     { '<leader>t', group = 'Toggle' },
     { '<leader>s', group = 'Snacks', icon = '' },
-    { '<leader>o', group = 'Opencode', icon = '󰚩' }
+    { '<leader>o', group = 'Opencode', icon = '󰚩' },
     -- { '<leader>h', group = 'Git Hunk', mode = { 'n', 'v' } },
-    -- { '<leader>P', group = 'Picture', icon = '' },
+    { '<leader>P', group = 'Picture', icon = '' },
     -- { '<leader>x', group = 'Execute Lua', icon = '', mode = { 'n', 'v' } },
 }
