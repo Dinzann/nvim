@@ -4,6 +4,14 @@ vim.pack.add({
     { src = "https://github.com/folke/lazydev.nvim" },
 })
 
+require("lazydev").setup({
+    library = {
+        { path = "luv", types = true },
+        { path = "vim", types = true },
+        { path = "lua", types = true },
+    },
+})
+
 require("lsp.keymapping")
 
 vim.diagnostic.config {
@@ -22,14 +30,6 @@ vim.diagnostic.config {
         }
     }
 }
-
-require("lazydev").setup({
-    library = {
-        { path = "luv", types = true },
-        { path = "vim", types = true },
-        { path = "lua", types = true },
-    },
-})
 
 require("mason").setup({
     ui = {
