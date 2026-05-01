@@ -59,9 +59,6 @@ require("statuscol").setup({
     segments = {
         { text = { builtin.foldfunc, " " }, click = "v:lua.ScFa" }, -- 仅显示图标
         { text = { builtin.lnumfunc, " " }, click = "v:lua.ScLa" }, -- 行号
-        {
-            sign = { name = { ".*" }, maxwidth = 1, colwidth = 2 },
-            click = "v:lua.ScSa"
-        },                                                          -- Git Signs 等
+        { text = { "%s" }, click = "v:lua.ScSa" },
     }
 })
