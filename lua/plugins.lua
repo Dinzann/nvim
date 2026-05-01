@@ -24,3 +24,5 @@ require("custom.config.markdown")
 
 require("custom.config.opencode")
 require("custom.config.img-clip")
+-- require("custom.config.ufo")
+require("custom.config.statuscol")
