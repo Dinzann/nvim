@@ -1,68 +1,79 @@
-vim.pack.add({
-    { src = "https://github.com/saghen/blink.cmp" },
-    { src = "https://github.com/L3MON4D3/LuaSnip" },
-    { src = "https://github.com/rafamadriz/friendly-snippets" },
-})
+vim.api.nvim_create_autocmd({ "InsertEnter", "CmdlineEnter" }, {
+    group = vim.api.nvim_create_augroup("SetupCompletion", { clear = true }),
+    once = true, -- 确保只在第一次进入时执行
+    callback = function()
+        -- 1. 动态添加插件包
+        vim.pack.add({
+            { src = "https://github.com/saghen/blink.cmp" },
+            { src = "https://github.com/L3MON4D3/LuaSnip" },
+            { src = "https://github.com/rafamadriz/friendly-snippets" },
+        })
 
-require("luasnip.loaders.from_vscode").lazy_load()
+        -- 2. 加载 VSCode 格式的代码片段 (friendly-snippets)
+        require("luasnip.loaders.from_vscode").lazy_load()
 
-require("blink.cmp").setup({
-    fuzzy = { implementation = "lua" },
-    keymap = {
-        preset = "enter",
-        ["<C-j>"] = { "select_next", "fallback" },
-        ["<C-k>"] = { "select_prev", "fallback" },
-        ["<Tab>"] = { "snippet_forward", "fallback" },
-        ["<S-Tab>"] = { "snippet_backward", "fallback" },
-    },
-    cmdline = {
-        completion = {
-            menu = {
-                auto_show = true,
+        -- 3. 执行 blink.cmp 的配置
+        require("blink.cmp").setup({
+            fuzzy = { implementation = "lua" },
+            keymap = {
+                preset = "enter",
+                ["<C-j>"] = { "select_next", "fallback" },
+                ["<C-k>"] = { "select_prev", "fallback" },
+                ["<Tab>"] = { "snippet_forward", "fallback" },
+                ["<S-Tab>"] = { "snippet_backward", "fallback" },
             },
-        },
-    },
-    completion = {
-        accept = { auto_brackets = { enabled = true } },
-        list = { selection = { preselect = false, auto_insert = true } },
-        menu = {
-            border = 'rounded',
-            auto_show = true,
-            draw = {
-                treesitter = { "lsp" },
+            cmdline = {
+                completion = {
+                    menu = { auto_show = true },
+                },
             },
-        },
-        trigger = {
-            show_on_backspace = true,
-            prefetch_on_insert = false
-        },
-        documentation = {
-            auto_show = true,
-            auto_show_delay_ms = 0,
-            window = {
-                border = "rounded",
-                winhighlight =
-                "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
-                max_width = 80,
-                max_height = 20,
+            completion = {
+                accept = { auto_brackets = { enabled = true } },
+                list = { selection = { preselect = false, auto_insert = true } },
+                menu = {
+                    border = 'rounded',
+                    auto_show = true,
+                    draw = {
+                        treesitter = { "lsp" },
+                    },
+                },
+                trigger = {
+                    show_on_backspace = true,
+                    prefetch_on_insert = false
+                },
+                documentation = {
+                    auto_show = true,
+                    auto_show_delay_ms = 0,
+                    window = {
+                        border = "rounded",
+                        winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
+                        max_width = 80,
+                        max_height = 20,
+                    },
+                },
             },
-        },
-    },
-    sources = {
-        default = { "codeium", "lsp", "path", "snippets", "buffer" },
-        providers = {
-            codeium = {
-                name = "Codeium",
-                module = "codeium.blink",
-                async = true,
-                score_offset = 100,
-                enabled = function()
-                    local buftype = vim.api.nvim_get_option_value("buftype", { buf = 0 })
-                    return buftype ~= "prompt" and buftype ~= "nofile"
-                end,
+            sources = {
+                default = { "codeium", "lsp", "path", "snippets", "buffer" },
+                providers = {
+                    codeium = {
+                        name = "Codeium",
+                        module = "codeium.blink",
+                        async = true,
+                        score_offset = 100,
+                        enabled = function()
+                            local buftype = vim.api.nvim_get_option_value("buftype", { buf = 0 })
+                            return buftype ~= "prompt" and buftype ~= "nofile"
+                        end,
+                    },
+                },
             },
-        },
-    },
-    snippets = { preset = "luasnip" },
-    signature = { enabled = true },
+            snippets = { preset = "luasnip" },
+            signature = { enabled = true },
+        })
+
+        -- 如果需要在加载后立即触发补全（可选）
+        -- vim.schedule(function()
+        --     require('blink.cmp').show()
+        -- end)
+    end,
 })

@@ -14,22 +14,37 @@ require("lazydev").setup({
 
 require("lsp.keymapping")
 
-vim.diagnostic.config {
+local signs = {
+    [vim.diagnostic.severity.ERROR] = '󰅚 ',
+    [vim.diagnostic.severity.WARN]  = '󰀪 ',
+    [vim.diagnostic.severity.HINT]  = '󰌶 ',
+    [vim.diagnostic.severity.INFO]  = '󰋽 ',
+}
+
+vim.diagnostic.config({
+    signs = { text = signs },
     virtual_text = {
         spacing = 4,
-        prefix = ''
+        prefix = '',
+        severity_sort = true,
     },
-    float = { severity_sort = true },
+    float = {
+        border = "rounded",
+        style = "minimal",
+        -- source = "always",
+        header = "",
+    },
     severity_sort = true,
-    signs = {
-        text = {
-            [vim.diagnostic.severity.ERROR] = '',
-            [vim.diagnostic.severity.HINT] = '',
-            [vim.diagnostic.severity.INFO] = '',
-            [vim.diagnostic.severity.WARN] = ''
-        }
-    }
-}
+})
+
+local function set_diagnostic_hl()
+    local colors = { error = "#ed8796", warn = "#eed49f", info = "#8bd5ca", hint = "#91d7e3" }
+    vim.api.nvim_set_hl(0, "DiagnosticSignError", { fg = colors.error })
+    vim.api.nvim_set_hl(0, "DiagnosticSignWarn", { fg = colors.warn })
+    vim.api.nvim_set_hl(0, "DiagnosticSignInfo", { fg = colors.info })
+    vim.api.nvim_set_hl(0, "DiagnosticSignHint", { fg = colors.hint })
+end
+set_diagnostic_hl()
 
 require("mason").setup({
     ui = {
