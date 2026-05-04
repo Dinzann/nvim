@@ -12,7 +12,6 @@ require("custom.config.ai")
 require("custom.config.aerial")
 require("custom.config.treesitter")
 
--- require("custom.config.bufferline")
 require("custom.config.heirline")
 
 require("custom.config.oil")
@@ -24,6 +23,5 @@ require("custom.config.markdown")
 
 require("custom.config.opencode")
 require("custom.config.img-clip")
--- require("custom.config.ufo")
 require("custom.config.statuscol")
 require("custom.config.gitsigns")
