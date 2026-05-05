@@ -19,7 +19,9 @@ require("custom.config.yazi")
 
 require("custom.config.snacks")
 require("custom.config.which-key")
+
 require("custom.config.markdown")
+require("custom.config.typst")
 
 require("custom.config.opencode")
 require("custom.config.img-clip")

@@ -57,6 +57,7 @@ vim.lsp.enable('pyright')
 vim.lsp.enable('clangd')
 vim.lsp.enable('ts_ls')
 vim.lsp.enable('bashls')
+vim.lsp.enable('tinymist')
 
 require("mason-lspconfig").setup({
     ensure_installed = {
