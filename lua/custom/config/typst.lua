@@ -78,11 +78,11 @@ function setup_typst_preview()
         pattern = 'typst',
         callback = function()
             local buf = vim.api.nvim_get_current_buf()
-            vim.keymap.set('n', '<leader>tp', '<cmd>TypstPreview<CR>',
+            vim.keymap.set('n', '<leader>ttp', '<cmd>TypstPreview<CR>',
                 { buffer = buf, desc = 'Toggle Typst Preview' })
-            vim.keymap.set('n', '<leader>tu', '<cmd>TypstPreviewUpdate<CR>',
+            vim.keymap.set('n', '<leader>ttu', '<cmd>TypstPreviewUpdate<CR>',
                 { buffer = buf, desc = 'Update Typst Preview' })
-            vim.keymap.set('n', '<leader>tq', '<cmd>TypstPreviewStop<CR>',
+            vim.keymap.set('n', '<leader>ttq', '<cmd>TypstPreviewStop<CR>',
                 { buffer = buf, desc = 'Stop Typst Preview' })
         end,
     })
