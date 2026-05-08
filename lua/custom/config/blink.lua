@@ -75,19 +75,20 @@ vim.api.nvim_create_autocmd({ "InsertEnter", "CmdlineEnter" }, {
                 },
             },
             sources = {
-                default = { "codeium", "lsp", "path", "snippets", "buffer" },
-                providers = {
-                    codeium = {
-                        name = "Codeium",
-                        module = "codeium.blink",
-                        async = true,
-                        score_offset = 100,
-                        enabled = function()
-                            local buftype = vim.api.nvim_get_option_value("buftype", { buf = 0 })
-                            return buftype ~= "prompt" and buftype ~= "nofile"
-                        end,
-                    },
-                },
+                default = { "lsp", "path", "snippets", "buffer" },
+                -- default = { "codeium", "lsp", "path", "snippets", "buffer" },
+                -- providers = {
+                --     codeium = {
+                --         name = "Codeium",
+                --         module = "codeium.blink",
+                --         async = true,
+                --         score_offset = 100,
+                --         enabled = function()
+                --             local buftype = vim.api.nvim_get_option_value("buftype", { buf = 0 })
+                --             return buftype ~= "prompt" and buftype ~= "nofile"
+                --         end,
+                --     },
+                -- },
             },
             cmdline = {
                 completion = {
