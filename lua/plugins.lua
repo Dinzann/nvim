@@ -14,8 +14,9 @@ require("custom.config.treesitter")
 
 require("custom.config.heirline")
 
-require("custom.config.oil")
-require("custom.config.yazi")
+-- require("custom.config.oil")
+-- require("custom.config.yazi")
+require("custom.config.mini-files")
 
 require("custom.config.snacks")
 require("custom.config.which-key")
