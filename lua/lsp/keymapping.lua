@@ -15,6 +15,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
         keymap.set("n", "<leader>ld", function()
             vim.diagnostic.open_float({ source = true })
         end, { buffer = event.buf, desc = "LSP: Show Diagnostic" })
+        keymap.set("n", "<leader>lt", function()
+            local current = vim.diagnostic.config() or {}
+            local enabled = not current.virtual_text
+            vim.diagnostic.config({
+                virtual_text = enabled,
+                signs = enabled,
+                underline = enabled,
+            })
+        end, { buffer = event.buf, desc = "LSP: Toggle Diagnostic" })
 
         keymap.set("n", "<leader>la", function()
             require("lspsaga.codeaction"):code_action()

@@ -1,6 +1,8 @@
 require("custom.config.vim-tmux-navigator")
 require("custom.config.autopairs")
+
 require("custom.config.comment")
+require("custom.config.codediff")
 require("custom.config.flash")
 
 require("custom.config.colorscheme")
@@ -18,6 +20,7 @@ require("custom.config.heirline")
 -- require("custom.config.yazi")
 require("custom.config.mini-files")
 
+require("custom.config.vpack")
 require("custom.config.snacks")
 require("custom.config.which-key")
 
@@ -26,5 +29,6 @@ require("custom.config.typst")
 
 require("custom.config.opencode")
 require("custom.config.img-clip")
-require("custom.config.statuscol")
+-- require("custom.config.statuscol")
 require("custom.config.gitsigns")
+require("custom.config.comfylnum")
