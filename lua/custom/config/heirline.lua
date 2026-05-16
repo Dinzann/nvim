@@ -10,3 +10,5 @@ vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
 		})
 	end,
 })
+
+vim.o.laststatus = 3
