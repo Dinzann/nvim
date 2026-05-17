@@ -24,7 +24,7 @@ require("snacks").setup({
         preset = {
             keys = {
                 { icon = "󰈞 ", key = "f", desc = "Find files", action = ":lua Snacks.picker.smart()" },
-                { icon = " ", key = "o", desc = "Find history", action = "lua Snacks.picker.recent()" },
+                { icon = " ", key = "o", desc = "Find history", action = ":lua Snacks.picker.undo()" },
                 { icon = " ", key = "e", desc = "New file", action = ":enew" },
                 { icon = " ", key = "r", desc = "Recent files", action = ":lua Snacks.picker.recent()" },
                 { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
@@ -215,6 +215,7 @@ local function get_tabs()
     return tabs
 end
 
+---@diagnostic disable-next-line: lowercase-global
 function tabs_picker()
     local items = get_tabs()
     Snacks.picker({
