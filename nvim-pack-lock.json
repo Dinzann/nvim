@@ -32,6 +32,10 @@
       "rev": "9adedbaf1f410cdaacf4fb2ca8eb44f3d5f6d010",
       "src": "https://github.com/mluders/comfy-line-numbers.nvim"
     },
+    "conform.nvim": {
+      "rev": "18aeab3d63d350dcf44d64c462cc489a3412af40",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
     "flash.nvim": {
       "rev": "fcea7ff883235d9024dc41e638f164a450c14ca2",
       "src": "https://github.com/folke/flash.nvim"
