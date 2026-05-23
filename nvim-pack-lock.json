@@ -12,6 +12,10 @@
       "rev": "645d108a5242ec7b378cbe643eb6d04d4223f034",
       "src": "https://github.com/stevearc/aerial.nvim"
     },
+    "auto-session": {
+      "rev": "3e145ee9af42eb6764908a1a481f53fe7f0bdbe5",
+      "src": "https://github.com/rmagatti/auto-session"
+    },
     "blink.cmp": {
       "rev": "679a2ffad4bae720bb12e6bcdf57b0dd8b8a80f8",
       "src": "https://github.com/saghen/blink.cmp"

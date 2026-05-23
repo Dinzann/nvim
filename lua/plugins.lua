@@ -1,3 +1,4 @@
+require("custom.config.auto-session")
 require("custom.config.vim-tmux-navigator")
 require("custom.config.autopairs")
 
