@@ -3,7 +3,6 @@ pcall(vim.cmd, "packadd blink.lib")
 local lz = require("lz.n")
 
 lz.load({
-	-- 1. LuaSnip 独立加载
 	{
 		"LuaSnip",
 		pack = { src = "https://github.com/L3MON4D3/LuaSnip" },
@@ -12,15 +11,11 @@ lz.load({
 			require("luasnip.loaders.from_vscode").lazy_load()
 		end,
 	},
-
-	-- 2. 静态代码片段资源包
 	{
 		"friendly-snippets",
 		pack = { src = "https://github.com/rafamadriz/friendly-snippets" },
 		event = { "InsertEnter", "CmdlineEnter" },
 	},
-
-	-- 3. 图标插件独立加载
 	{
 		"mini.icons",
 		pack = { src = "https://github.com/echasnovski/mini.icons" },
@@ -29,8 +24,6 @@ lz.load({
 			require("mini.icons").setup()
 		end,
 	},
-
-	-- 4. 核心补全插件（此时底层 rtp 早就准备好了）
 	{
 		"blink.cmp",
 		pack = { src = "https://github.com/saghen/blink.cmp" },
