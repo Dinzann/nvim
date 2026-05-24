@@ -7,9 +7,8 @@ require("mini.icons").setup()
 
 require("custom.colorscheme.catppuccin")
 require("custom.colorscheme.rose-pine")
-require("custom.colorscheme.nordic")
 
 require("themery").setup({
-	themes = { "catppuccin", "rose-pine-moon", "nordic" },
+	themes = { "catppuccin", "rose-pine-moon" },
 	livePreview = true,
 })

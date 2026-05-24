@@ -45,6 +45,7 @@ lz.load({
 					["\\"] = { "actions.select", opts = { horizontal = true } },
 					["|"] = { "actions.select", opts = { vertical = true } },
 					["-"] = "actions.close",
+					["q"] = "actions.close",
 					["<BS>"] = "actions.parent",
 					["gd"] = {
 						desc = "Toggle file detail view",
