@@ -19,8 +19,6 @@ lz.load({
 	{
 		"oil.nvim",
 		pack = { src = "https://github.com/stevearc/oil.nvim" },
-		event = { "BufEnter" },
-		keys = { { "-", desc = "Open parent directory" } },
 
 		after = function()
 			package.loaded["oil"] = nil
@@ -66,23 +64,6 @@ lz.load({
 			})
 
 			vim.keymap.set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory", silent = true })
-
-			if vim.fn.isdirectory(vim.api.nvim_buf_get_name(0)) == 1 then
-				vim.cmd("Oil")
-			end
 		end,
 	},
 })
-
-vim.keymap.set("n", "-", function()
-	local has_oil, oil = pcall(require, "oil")
-	if has_oil and type(oil) == "table" then
-		vim.cmd("Oil")
-	else
-		pcall(vim.cmd, "packadd oil.nvim")
-		package.loaded["oil"] = nil
-		if pcall(require, "oil") then
-			vim.cmd("Oil")
-		end
-	end
-end, { desc = "Open parent directory", silent = true })
