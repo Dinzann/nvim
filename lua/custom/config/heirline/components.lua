@@ -202,19 +202,44 @@ M.MacroRecording = {
 M.Formatters = {
 	condition = function(self)
 		local ok, conform = pcall(require, "conform")
-		self.conform = conform
-		return ok
+		if ok and type(conform) == "table" then
+			self.conform = conform
+			return true
+		end
+		return false
 	end,
-	update = { "BufEnter" },
+	update = { "BufEnter", "BufWritePost" },
 	provider = function(self)
+		if not self.conform or type(self.conform) ~= "table" then
+			return ""
+		end
+
 		local ft_entry = self.conform.formatters_by_ft[vim.bo.filetype]
+		if not ft_entry then
+			return ""
+		end
+
 		local ft_formatters
 		if type(ft_entry) == "function" then
-			ft_formatters = ft_entry()
+			local ok, res = pcall(ft_entry, 0)
+			ft_formatters = ok and res or nil
 		else
 			ft_formatters = ft_entry
 		end
-		return ft_formatters and table.concat(ft_formatters, ",") or ""
+
+		if type(ft_formatters) == "table" then
+			local names = {}
+			for _, v in ipairs(ft_formatters) do
+				if type(v) == "string" then
+					table.insert(names, v)
+				end
+			end
+			if #names > 0 then
+				return "󰉼 " .. table.concat(names, ",")
+			end
+		end
+
+		return ""
 	end,
 	hl = { fg = dim_color, bold = false },
 }

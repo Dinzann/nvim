@@ -29,8 +29,8 @@
       "src": "https://github.com/catppuccin/nvim"
     },
     "codediff.nvim": {
-      "rev": "e500fb5e7e2fbce701c888b81a9449e1052413ec",
-      "src": "git@github.com:esmuellert/codediff.nvim.git"
+      "rev": "76ff1b13f0bcba655dca85cea1ef0df877a53c0f",
+      "src": "https://github.com/esmuellert/codediff.nvim"
     },
     "comfy-line-numbers.nvim": {
       "rev": "9adedbaf1f410cdaacf4fb2ca8eb44f3d5f6d010",
@@ -67,6 +67,10 @@
     "lspsaga.nvim": {
       "rev": "562d9724e3869ffd1801c572dd149cc9f8d0cc36",
       "src": "https://github.com/nvimdev/lspsaga.nvim"
+    },
+    "lz.n": {
+      "rev": "c9891469e10c06f3d883dec33bb52568e8372d0a",
+      "src": "https://github.com/lumen-oss/lz.n"
     },
     "mason-lspconfig.nvim": {
       "rev": "0a3b42c3e503df87aef6d6513e13148381495c3a",
@@ -120,13 +124,17 @@
       "rev": "c7188a8f9d2953696b6303caccbf39c51fa2c1b1",
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
+    "rose-pine": {
+      "rev": "ff483051a47e27d84bdef47703538df1ed9f4a47",
+      "src": "https://github.com/rose-pine/neovim"
+    },
     "snacks.nvim": {
       "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
       "src": "https://github.com/folke/snacks.nvim"
     },
-    "statuscol.nvim": {
-      "rev": "c46172d0911aa5d49ba5f39f4351d1bb7aa289cc",
-      "src": "https://github.com/luukvbaal/statuscol.nvim"
+    "themery.nvim": {
+      "rev": "bfa58f4b279d21cb515b28023e1b68ec908584b2",
+      "src": "https://github.com/zaldih/themery.nvim"
     },
     "typst-preview.nvim": {
       "rev": "87db18b8d19c8b0eed399f52e4c527ce5afe4817",
@@ -147,10 +155,6 @@
     "windsurf.nvim": {
       "rev": "821b570b526dbb05b57aa4ded578b709a704a38a",
       "src": "https://github.com/Exafunction/windsurf.nvim"
-    },
-    "yazi.nvim": {
-      "rev": "dbdebba5eb24e9046505fc3e9cbd2e25bd61baf9",
-      "src": "https://github.com/mikavilpas/yazi.nvim"
     }
   }
 }

@@ -6,7 +6,6 @@ require("custom.config.comment")
 require("custom.config.codediff")
 require("custom.config.flash")
 
-require("custom.config.colorscheme")
 require("custom.config.color")
 
 require("custom.config.lspsaga")
@@ -17,9 +16,9 @@ require("custom.config.treesitter")
 
 require("custom.config.heirline")
 
--- require("custom.config.oil")
+require("custom.config.oil")
 -- require("custom.config.yazi")
-require("custom.config.mini-files")
+-- require("custom.config.mini-files")
 
 require("custom.config.vpack")
 require("custom.config.snacks")
