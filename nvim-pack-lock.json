@@ -88,6 +88,10 @@
       "rev": "7fdae2443a0e2910015ca39ad74b50524ee682d3",
       "src": "https://github.com/nvim-mini/mini.icons"
     },
+    "nordic.nvim": {
+      "rev": "9fb62116b891184049c50ca6ffb0d3bc100a1a6e",
+      "src": "https://github.com/AlexvZyl/nordic.nvim"
+    },
     "nvim-autopairs": {
       "rev": "59bce2eef357189c3305e25bc6dd2d138c1683f5",
       "src": "https://github.com/windwp/nvim-autopairs"

@@ -373,13 +373,23 @@ M.FileIcon = {
 		self.is_modified = vim.api.nvim_get_option_value("modified", { buf = self.bufnr })
 		local filename = self.filename
 		local extension = vim.fn.fnamemodify(filename, ":e")
+
 		local icon, hl, _ = MiniIcons.get("file", "file." .. extension)
 		local bt = vim.api.nvim_get_option_value("buftype", { buf = self.bufnr }) or nil
 		if bt and bt == "terminal" then
 			icon = ""
 		end
 		self.icon = icon
-		self.icon_color = string.format("#%06x", vim.api.nvim_get_hl(0, { name = hl })["fg"])
+
+		local fg_color = nil
+		if hl then
+			local ok, hl_data = pcall(vim.api.nvim_get_hl, 0, { name = hl, link = true })
+			if ok and hl_data and hl_data.fg then
+				fg_color = string.format("#%06x", hl_data.fg)
+			end
+		end
+
+		self.icon_color = fg_color or dim_color
 	end,
 	provider = function(self)
 		return self.icon and (self.icon .. " ")
@@ -394,7 +404,18 @@ M.FileName = {
 		local filename = self.filename
 		local extension = vim.fn.fnamemodify(filename, ":e")
 		local _, hl, _ = MiniIcons.get("file", "file." .. extension)
-		self.icon_color = string.format("#%06x", vim.api.nvim_get_hl(0, { name = hl })["fg"])
+
+		-- 1. 🎯 核心防御：安全提取十六进制颜色，防止在特殊 buffer 里碎掉
+		local fg_color = nil
+		if hl then
+			local ok, hl_data = pcall(vim.api.nvim_get_hl, 0, { name = hl, link = true })
+			if ok and hl_data and hl_data.fg then
+				fg_color = string.format("#%06x", hl_data.fg)
+			end
+		end
+
+		-- 2. 🎯 终极兜底：拿不到就退回到你定义的 dim_color
+		self.icon_color = fg_color or dim_color
 	end,
 	provider = function(self)
 		local filename = self.filename
