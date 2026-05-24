@@ -17,8 +17,6 @@ require("custom.config.treesitter")
 require("custom.config.heirline")
 
 require("custom.config.oil")
--- require("custom.config.yazi")
--- require("custom.config.mini-files")
 
 require("custom.config.vpack")
 require("custom.config.snacks")
@@ -29,7 +27,6 @@ require("custom.config.typst")
 
 require("custom.config.opencode")
 require("custom.config.img-clip")
--- require("custom.config.statuscol")
 require("custom.config.conform")
 require("custom.config.gitsigns")
 require("custom.config.comfylnum")
