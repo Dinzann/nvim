@@ -43,5 +43,20 @@ vim.api.nvim_create_autocmd("LspAttach", {
             local win = vim.api.nvim_get_current_win()
             vim.wo[win][0].foldexpr = "v:lua.vim.lsp.foldexpr()"
         end
+
+        -- [document highlight]
+        if client and client:supports_method("textDocument/documentHighlight") then
+            local group = vim.api.nvim_create_augroup("lsp-doc-highlight-" .. event.buf, { clear = true })
+            vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+                group = group,
+                buffer = event.buf,
+                callback = vim.lsp.buf.document_highlight,
+            })
+            vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+                group = group,
+                buffer = event.buf,
+                callback = vim.lsp.buf.clear_references,
+            })
+        end
     end,
 })
