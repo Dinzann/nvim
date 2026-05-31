@@ -1,12 +1,13 @@
-vim.pack.add({
-	{ src = "https://github.com/rmagatti/auto-session" },
-})
-
 local lz = require("lz.n")
 
 lz.load({
 	{
 		"auto-session",
+		before = function()
+			vim.pack.add({
+				{ src = "https://github.com/rmagatti/auto-session" },
+			})
+		end,
 		-- 🎯 关键时机：在进入 Neovim 且 UI 渲染完毕（或读取缓冲区）时加载
 		-- 这样能确保打开目录或文件时，立刻无缝恢复上一次的会话状态
 		event = { "VimEnter" },

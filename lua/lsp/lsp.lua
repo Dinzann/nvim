@@ -65,6 +65,7 @@ require("mason-lspconfig").setup({
         "pyright",
         "clangd",
         "ts_ls",
-        "bashls"
+        "bashls",
+        "tinymist"
     }
 })

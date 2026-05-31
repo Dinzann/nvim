@@ -1,12 +1,13 @@
-vim.pack.add({
-	{ src = "https://github.com/nickjvandyke/opencode.nvim" },
-})
-
 local lz = require("lz.n")
 
 lz.load({
 	{
 		"opencode.nvim",
+		before = function()
+			vim.pack.add({
+				{ src = "https://github.com/nickjvandyke/opencode.nvim" },
+			})
+		end,
 		keys = {
 			{ "<leader>oa", mode = { "n", "v" } },
 		},

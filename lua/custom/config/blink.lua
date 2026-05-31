@@ -1,13 +1,3 @@
-vim.pack.add({
-	{ src = "https://github.com/saghen/blink.lib" },
-	{ src = "https://github.com/saghen/blink.cmp" },
-	{ src = "https://github.com/echasnovski/mini.icons" },
-	{ src = "https://github.com/L3MON4D3/LuaSnip" },
-	{ src = "https://github.com/rafamadriz/friendly-snippets" },
-})
-
-pcall(vim.cmd, "packadd blink.lib")
-
 local lz = require("lz.n")
 
 lz.load({
@@ -31,6 +21,16 @@ lz.load({
 	},
 	{
 		"blink.cmp",
+		before = function()
+			vim.pack.add({
+				{ src = "https://github.com/saghen/blink.lib" },
+				{ src = "https://github.com/saghen/blink.cmp" },
+				{ src = "https://github.com/echasnovski/mini.icons" },
+				{ src = "https://github.com/L3MON4D3/LuaSnip" },
+				{ src = "https://github.com/rafamadriz/friendly-snippets" },
+			})
+			pcall(vim.cmd, "packadd blink.lib")
+		end,
 		event = { "InsertEnter", "CmdlineEnter" },
 		after = function()
 			require("blink.cmp").setup({
