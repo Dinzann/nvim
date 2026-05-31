@@ -1,8 +1,11 @@
+vim.pack.add({
+	{ src = "https://github.com/stevearc/conform.nvim" },
+})
+
 local lz = require("lz.n")
 
 lz.load({
 	"conform.nvim",
-	pack = { src = "https://github.com/stevearc/conform.nvim" },
 	event = { "BufWritePre" },
 	keys = { { "<leader>lf", desc = "Format buffer" } },
 	after = function()

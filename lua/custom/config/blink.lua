@@ -1,3 +1,11 @@
+vim.pack.add({
+	{ src = "https://github.com/saghen/blink.lib" },
+	{ src = "https://github.com/saghen/blink.cmp" },
+	{ src = "https://github.com/echasnovski/mini.icons" },
+	{ src = "https://github.com/L3MON4D3/LuaSnip" },
+	{ src = "https://github.com/rafamadriz/friendly-snippets" },
+})
+
 pcall(vim.cmd, "packadd blink.lib")
 
 local lz = require("lz.n")
@@ -5,7 +13,6 @@ local lz = require("lz.n")
 lz.load({
 	{
 		"LuaSnip",
-		pack = { src = "https://github.com/L3MON4D3/LuaSnip" },
 		event = { "InsertEnter", "CmdlineEnter" },
 		after = function()
 			require("luasnip.loaders.from_vscode").lazy_load()
@@ -13,12 +20,10 @@ lz.load({
 	},
 	{
 		"friendly-snippets",
-		pack = { src = "https://github.com/rafamadriz/friendly-snippets" },
 		event = { "InsertEnter", "CmdlineEnter" },
 	},
 	{
 		"mini.icons",
-		pack = { src = "https://github.com/echasnovski/mini.icons" },
 		event = { "InsertEnter", "CmdlineEnter" },
 		after = function()
 			require("mini.icons").setup()
@@ -26,7 +31,6 @@ lz.load({
 	},
 	{
 		"blink.cmp",
-		pack = { src = "https://github.com/saghen/blink.cmp" },
 		event = { "InsertEnter", "CmdlineEnter" },
 		after = function()
 			require("blink.cmp").setup({

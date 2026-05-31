@@ -1,8 +1,11 @@
+vim.pack.add({
+	{ src = "https://github.com/chomosuke/typst-preview.nvim" },
+})
+
 local lz = require("lz.n")
 
 lz.load({
 	"typst-preview.nvim",
-	pack = { src = "https://github.com/chomosuke/typst-preview.nvim" },
 	ft = "typst",
 	cmd = "TypstPreview",
 	after = function()

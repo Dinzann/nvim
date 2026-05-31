@@ -1,3 +1,7 @@
+vim.pack.add({
+	{ src = "https://github.com/stevearc/aerial.nvim" },
+})
+
 vim.keymap.set("n", "<leader>to", function()
 	if not package.loaded["aerial"] then
 		pcall(vim.cmd, "packadd aerial.nvim")
@@ -29,7 +33,6 @@ local lz = require("lz.n")
 lz.load({
 	{
 		"aerial.nvim",
-		pack = { src = "https://github.com/stevearc/aerial.nvim" },
 		after = function()
 			require("aerial").setup({
 				backends = { "lsp", "treesitter", "markdown" },

@@ -13,13 +13,15 @@ _G.get_oil_winbar = function()
 	return ""
 end
 
+vim.pack.add({
+	{ src = "https://github.com/stevearc/oil.nvim" },
+})
+
 local lz = require("lz.n")
 
 lz.load({
 	{
 		"oil.nvim",
-		pack = { src = "https://github.com/stevearc/oil.nvim" },
-
 		after = function()
 			package.loaded["oil"] = nil
 			package.loaded["oil.config"] = nil

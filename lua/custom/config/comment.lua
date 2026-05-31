@@ -1,10 +1,14 @@
 ---@diagnostic disable: missing-return
+
+vim.pack.add({
+	{ src = "https://github.com/numToStr/Comment.nvim" },
+})
+
 local lz = require("lz.n")
 
 lz.load({
 	{
 		"Comment.nvim",
-		pack = { src = "https://github.com/numToStr/Comment.nvim" },
 		keys = {
 			{ "<leader>/", "gcc", mode = "n", remap = true, desc = "Toggle comment line" },
 			{ "<leader>/", "gc", mode = "v", remap = true, desc = "Toggle comment visual" },
