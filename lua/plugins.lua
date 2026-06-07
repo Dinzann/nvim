@@ -24,7 +24,6 @@ require("custom.config.which-key")
 require("custom.config.markdown")
 require("custom.config.typst")
 
-require("custom.config.opencode")
 require("custom.config.img-clip")
 require("custom.config.conform")
 require("custom.config.gitsigns")
