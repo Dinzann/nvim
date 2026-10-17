@@ -4,7 +4,16 @@ vim.pack.add({
 
 local logo = require("utils.logo")
 
-require("snacks").setup({
+local ok, Snacks = pcall(require, "snacks")
+if not ok then
+	vim.notify(
+		"snacks.nvim is not ready yet. Restart Neovim after vim.pack finishes installing it.\n" .. tostring(Snacks),
+		vim.log.levels.WARN
+	)
+	return
+end
+
+Snacks.setup({
 	notifier = {},
 	input = {},
 	picker = {
@@ -168,8 +177,6 @@ map("<leader>n", Snacks.notifier.show_history, "Notification history")
 map("<leader>gb", Snacks.git.blame_line, "Git blame line")
 
 -- map("<leader>K", Snacks.image.hover, "Display image in hover")
-
-local Snacks = require("snacks")
 
 local function get_tabs()
 	local tabs = {}
