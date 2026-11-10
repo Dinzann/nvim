@@ -58,6 +58,7 @@ vim.lsp.enable('clangd')
 vim.lsp.enable('ts_ls')
 vim.lsp.enable('bashls')
 vim.lsp.enable('tinymist')
+vim.lsp.enable('nil_ls')
 
 require("mason-lspconfig").setup({
     ensure_installed = {
@@ -66,6 +67,7 @@ require("mason-lspconfig").setup({
         "clangd",
         "ts_ls",
         "bashls",
-        "tinymist"
+        "tinymist",
+        "nil_ls"
     }
 })
