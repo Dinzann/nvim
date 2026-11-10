@@ -8,11 +8,7 @@ local opts = {
 -----------------
 
 -- Hint: see `:h vim.map.set()`
--- Better window navigation
-vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
-vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
-vim.keymap.set("n", "<C-k>", "<C-w>k", opts)
-vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
+-- Normal-mode <C-hjkl> is owned by vim-tmux-navigator.lua
 
 vim.keymap.set("n", "Q", "<CMD>:qall<CR>", opts)
 
@@ -35,10 +31,11 @@ vim.keymap.set("v", ">", ">gv", opts)
 -- Inset mode --
 ----------------
 vim.keymap.set("i", "jk", "<Esc>", opts)
-vim.keymap.set("i", "<C-l>", "<Right>", opts)
 vim.keymap.set("i", "<C-h>", "<Left>", opts)
-vim.keymap.set("i", "<C-k>", "<Up>", opts)
-vim.keymap.set("i", "<C-j>", "<Down>", opts)
+vim.keymap.set("i", "<C-l>", "<Right>", opts)
+-- <C-o> avoids blink.cmp's <Up>/<Down> remap
+vim.keymap.set("i", "<C-j>", "<C-o>j", opts)
+vim.keymap.set("i", "<C-k>", "<C-o>k", opts)
 
 ----------------
 -- Delete way --

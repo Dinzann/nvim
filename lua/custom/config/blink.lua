@@ -37,8 +37,9 @@ lz.load({
 				fuzzy = { implementation = "lua" },
 				keymap = {
 					preset = "enter",
-					["<C-j>"] = { "select_next", "fallback" },
-					["<C-k>"] = { "select_prev", "fallback" },
+					-- free <C-hjkl> for insert-mode movement; use <C-n>/<C-p> to select
+					["<C-j>"] = false,
+					["<C-k>"] = false,
 					["<Tab>"] = { "snippet_forward", "fallback" },
 					["<S-Tab>"] = { "snippet_backward", "fallback" },
 				},
