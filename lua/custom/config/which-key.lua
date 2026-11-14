@@ -36,6 +36,7 @@ require("which-key").setup({
 
 require("which-key").add({
 	{ "g", group = "Go to", icon = "󰿅" },
+	{ "gs", group = "Surround", icon = "󰅪" },
 	-- { '<leader>a', group = 'Avante', icon = '󰚩' },
 	{ "<leader>b", group = "Buffer", icon = "" },
 	-- { '<leader>d', group = 'DAP', icon = '' },

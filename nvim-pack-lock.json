@@ -88,6 +88,10 @@
       "rev": "f916635dc5ae2f479fbb9ab8184bb9444b62e86c",
       "src": "https://github.com/nvim-mini/mini.icons"
     },
+    "mini.surround": {
+      "rev": "c17f9e2b2d685376b8ae7bb2cd8bb51dc7cd6d98",
+      "src": "https://github.com/nvim-mini/mini.surround"
+    },
     "nvim-autopairs": {
       "rev": "3172f40c16563db871a58f20d205c710ad782311",
       "src": "https://github.com/windwp/nvim-autopairs"
